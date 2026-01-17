@@ -1,0 +1,116 @@
+@tailwind base;
+
+@font-face {
+  font-family: "Orbitron", sans-serif;
+  src: url("/src/assets/fonts/orbitron-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron", sans-serif;
+  src: url("/src/assets/fonts/orbitron-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron", sans-serif;
+  src: url("/src/assets/fonts/orbitron-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Orbitron", Roboto, Ubuntu, sans-serif;
+    margin: 0;
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@layer base {
+  :root {
+    --bg-main: #12161c;
+    --bg-card: #141a2b;
+    --bg-modal: #0f1424;
+    --text-main: #ffffff;
+    --text-muted: #9aa4bf;
+    --accent: #ff3b01;
+    --border-soft: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ---------- REUSABLE COMPONENTS ---------- */
+@layer components {
+  .planet-grid {
+    @apply grid gap-6 mt-10;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .planet-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    @apply rounded-xl px-6 py-8 text-center cursor-pointer transition-transform;
+  }
+
+  .planet-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+  }
+
+  .modal-backdrop {
+    @apply fixed inset-0 flex items-center justify-center z-50;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal {
+    background: var(--bg-modal);
+    border: 1px solid var(--border-soft);
+    @apply rounded-2xl p-10 w-[90%] max-w-md;
+  }
+
+  .weather-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    @apply rounded-xl p-7 mt-8 max-w-md;
+  }
+}
+
+@layer base {
+  img {
+    max-width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+  }
+
+  iframe {
+    width: 100%;
+    height: 420px;
+    border-radius: 14px;
+    border: none;
+  }
+}
