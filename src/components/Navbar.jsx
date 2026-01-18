@@ -30,6 +30,9 @@ export default function Navbar() {
           <Link to="/mars-weather"   className="border-b-2 border-transparent hover:border-[#ff3b01] transition-colors">
             Mars Weather
           </Link>
+          <Link to="/quiz"   className="border-b-2 border-transparent hover:border-[#ff3b01] transition-colors">
+            Quiz
+          </Link>
         </nav>
 
       </div>
