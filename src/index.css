@@ -64,7 +64,6 @@
   }
 }
 
-/* ---------- REUSABLE COMPONENTS ---------- */
 @layer components {
   .planet-grid {
     @apply grid gap-6 mt-10;
@@ -98,7 +97,33 @@
     border: 1px solid var(--border-soft);
     @apply rounded-xl p-7 mt-8 max-w-md;
   }
+
+  .accent-element {
+    background-color: var(--accent);
+    width: 80px;
+    height: 3px;  
+  }
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 
 @layer base {
   img {
