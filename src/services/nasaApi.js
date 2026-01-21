@@ -50,10 +50,13 @@ export function extractCredit(explanation) {
 // https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=API_KEY
 
 export async function fetchMarsWeather() {
-  // some placeholder for now
-  return {
-    temp: -60,
-    pressure: 720,
-    wind: 5,
-  };
+  const res = await fetch(
+    `https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedtype=json&ver=1.0`
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch Mars weather");
+  }
+
+  return res.json();
 }

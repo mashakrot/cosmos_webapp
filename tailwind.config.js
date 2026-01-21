@@ -11,6 +11,7 @@ export default {
         spaceCard: "#141a2b",
         spaceModal: "#0f1424",
         accent: "#fff",
+        redAccent: "#ff3b01",
         muted: "#9aa4bf",
       },
     },
