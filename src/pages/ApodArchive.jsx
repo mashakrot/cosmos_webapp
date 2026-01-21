@@ -5,6 +5,7 @@ import { fetchRecentApods } from "../services/nasaApi";
 function getDateDaysAgo(days) {
   const d = new Date();
   d.setDate(d.getDate() - days);
+
   return d.toISOString().split("T")[0];
 }
 
@@ -12,12 +13,8 @@ function ArchiveCard({ item, onClick }) {
   return (
     <div className="bg-spaceCard rounded-md overflow-hidden cursor-pointer hover:shadow-lg transition"
       onClick={() => onClick(item)}>
-      <img
-        src={item.url}
-        alt={item.title}
-        loading="lazy"
-        className="w-full h-48 object-cover transition-opacity duration-500"
-      />
+      <img src={item.url} alt={item.title}
+        loading="lazy" className="w-full h-48 object-cover transition-opacity duration-500"/>
 
       <div className="p-4">
         <h3 className="text-md font-medium leading-tight mb-1">
@@ -79,7 +76,7 @@ export default function ApodArchive() {
 
   return (
     <div>
-      <section className="max-w-4xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-16">
         <h1 className="text-3xl font-semibold mb-4">
           Explore APOD Archive
         </h1>
