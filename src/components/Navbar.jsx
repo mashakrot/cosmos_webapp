@@ -15,7 +15,8 @@ export default function Navbar() {
           Space Today
         </Link>
 
-        <nav className="flex gap-14 text-sm text-main tracking-wide">
+        <nav className="flex gap-10 text-sm text-main tracking-wide">
+          <NavLink to="/" className={({ isActive }) => `border-b-2 hover:border-[#ff3b01] transition-colors pb-1 ${isActive ? "border-[#ff3b01]" : "border-transparent"}`}>Discover the Cosmos</NavLink>
           <NavLink to="/apod" className={({ isActive }) => `border-b-2 hover:border-[#ff3b01] transition-colors pb-1 ${isActive ? "border-[#ff3b01]" : "border-transparent"}`}>Picture of the Day</NavLink>
           <NavLink to="/archive" className={({ isActive }) => `border-b-2 hover:border-[#ff3b01] transition-colors ${isActive ? "border-[#ff3b01]" : "border-transparent"}`}>Explore Archive</NavLink>
           <NavLink to="/mars-weather" className={({ isActive }) => `border-b-2 hover:border-[#ff3b01] transition-colors ${isActive ? "border-[#ff3b01]" : "border-transparent"}`}>Mars Weather</NavLink>
