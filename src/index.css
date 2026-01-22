@@ -50,6 +50,10 @@
   a {
     text-decoration: none;
   }
+
+  img {
+    border: none;
+  }
 }
 
 @layer base {
@@ -123,7 +127,6 @@ input[type="date"]::-webkit-clear-button {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 
 @layer base {
   img {
