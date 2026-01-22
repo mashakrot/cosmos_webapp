@@ -1,9 +1,8 @@
 name: Deploy Vite App
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 
 jobs:
   build-and-deploy:
