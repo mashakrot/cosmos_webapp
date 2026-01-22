@@ -1,0 +1,29 @@
+name: Deploy Vite App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Inject Vite Env
+        run: |
+          echo "VITE_NASA_API_KEY=${{ secrets.NASA_API_KEY }}" >> $GITHUB_ENV
+
+      - name: Build
+        run: npm run build
