@@ -15,7 +15,7 @@ export default function PlanetButton({
         <img
           src={planet.image}
           alt={planet.name}
-          className="w-24 hover:scale-110 transition border-none" />
+          className="w-24 sm:w-28 md:w-32 lg:w-36 hover:scale-110 transition border-none" />
         {cleared && <ClearedIndicator />}
 
 
