@@ -20,11 +20,14 @@ export default function PlanetQuizModal({
           <img
             src={planet.image}
             alt={planet.name}
-            className="w-40 md:w-48 h-auto rounded-xl border-none"/>
+            className="w-40 md:w-48 h-auto rounded-xl border-none" />
         </div>
 
         <div className="flex-1 text-white">
           <h2 className="text-2xl font-semibold mb-4">{planet.name}</h2>
+          <p className="text-muted text-md mb-2 italic">
+            {planet.introQuestion}
+          </p>
 
           <p className="text-md leading-relaxed mb-4">
             {planet.description}
@@ -35,13 +38,24 @@ export default function PlanetQuizModal({
               <div className="w-[3px] h-20 bg-[#ff3b01] rounded-full" />
               <p className="text-md text-muted leading-relaxed">
                 <span className="text-accent font-semibold block mb-1">
-                  Fun fact
+                  Did you know?
+
                 </span>
                 {planet.funFact}
               </p>
             </div>
           )}
 
+
+          <div className="bg-black/30 rounded-lg p-4 mt-6 mb-6">
+            <p className="text-md text-muted">
+              <span className="font-semibold text-white block mb-1">
+                Put it into perspective
+              </span>
+              {planet.comparison}
+            </p>
+          </div>
+          
           <div className="mt-8">
             {!cleared ? (
               <button onClick={onTakeQuiz}

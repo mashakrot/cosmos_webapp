@@ -15,13 +15,16 @@ export default function PlanetModal({ planet, onClose }) {
 
         <div className="flex-none self-start flex justify-center md:justify-start">
           <img src={planet.image} alt={planet.name}
-            className="w-10 md:w-48 h-auto rounded-xl border-none"/>
+            className="w-10 md:w-48 h-auto rounded-xl border-none" />
         </div>
 
 
 
         <div className="flex-1 text-white">
           <h2 className="text-2xl font-semibold mb-4">{planet.name}</h2>
+          <p className="text-muted text-md mb-2 italic">
+            {planet.introQuestion}
+          </p>
 
           <p className="text-md text-white leading-relaxed mb-4">
             {planet.description}
@@ -31,11 +34,26 @@ export default function PlanetModal({ planet, onClose }) {
 
             <p className="text-md text-muted leading-relaxed">
               <span className="text-accent font-semibold block mb-1">
-                Fun fact
+                Did you know?
+
               </span>
               {planet.funFact}
             </p>
           </div>
+
+          <div className="bg-black/30 rounded-lg p-4 mt-6 mb-6">
+            <p className="text-md text-muted">
+              <span className="font-semibold text-white block mb-1">
+                Put it into perspective
+              </span>
+              {planet.comparison}
+            </p>
+          </div>
+
+          {/* <p className="text-sm text-accent/80 italic">
+            💡 Keep this in mind: {planet.quizHint}
+          </p> */}
+
 
         </div>
 
