@@ -74,7 +74,7 @@ const PLANET_QUESTIONS = [
 ];
 
 export default function Quiz() {
-  const [gameState, setGameState] = useState("start"); // 'start', 'playing', 'finished'
+  const [gameState, setGameState] = useState("start");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -91,7 +91,7 @@ export default function Quiz() {
   };
 
   const handleAnswerSelect = (answerIndex) => {
-    if (selectedAnswer !== null) return; // Prevent changing answer after selection
+    if (selectedAnswer !== null) return; 
 
     const question = PLANET_QUESTIONS[currentQuestionIndex];
     const isCorrect = answerIndex === question.correct;
@@ -138,7 +138,6 @@ export default function Quiz() {
   return (
     <main className="min-h-screen bg-space text-white">
       <section className="max-w-4xl mx-auto px-6 py-16">
-        {/* Start Screen */}
         {gameState === "start" && (
           <div className="text-center space-y-8">
             <div className="space-y-4">
@@ -166,10 +165,8 @@ export default function Quiz() {
           </div>
         )}
 
-        {/* Playing Screen */}
         {gameState === "playing" && (
           <div className="space-y-8">
-            {/* Progress Bar */}
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <span className="text-sm text-muted">
@@ -187,11 +184,9 @@ export default function Quiz() {
               </div>
             </div>
 
-            {/* Question Card */}
             <div className="bg-slate-900/50 backdrop-blur border border-slate-700 rounded-lg p-8 space-y-6">
               <h2 className="text-2xl font-bold">{currentQuestion.question}</h2>
 
-              {/* Answer Options */}
               <div className="space-y-3">
                 {currentQuestion.options.map((option, index) => (
                   <button
@@ -229,7 +224,6 @@ export default function Quiz() {
                 ))}
               </div>
 
-              {/* Hint Button and Result */}
               <div className="flex justify-between items-center pt-4">
                 <button
                   onClick={() => setShowHint(!showHint)}
@@ -258,7 +252,6 @@ export default function Quiz() {
                 )}
               </div>
 
-              {/* Hint Display */}
               {showHint && selectedAnswer === null && (
                 <div className="bg-blue-900/30 border border-blue-700 rounded p-4">
                   <p className="text-sm text-blue-200">
@@ -268,7 +261,6 @@ export default function Quiz() {
               )}
             </div>
 
-            {/* Next Button */}
             {selectedAnswer !== null && (
               <button
                 onClick={handleNext}
@@ -282,7 +274,6 @@ export default function Quiz() {
           </div>
         )}
 
-        {/* Results Screen */}
         {gameState === "finished" && (
           <div className="text-center space-y-8">
             <div className="space-y-4">
@@ -292,7 +283,6 @@ export default function Quiz() {
               </p>
             </div>
 
-            {/* Score Card */}
             <div className="bg-slate-900/50 backdrop-blur border border-slate-700 rounded-lg p-8 space-y-4">
               <div className="text-6xl font-bold text-orange-500">
                 {scorePercentage}%
@@ -311,7 +301,6 @@ export default function Quiz() {
               </div>
             </div>
 
-            {/* Review Section */}
             <div className="bg-slate-900/50 backdrop-blur border border-slate-700 rounded-lg p-6 text-left space-y-4 max-h-96 overflow-y-auto">
               <h3 className="text-lg font-semibold">Answer Review</h3>
               {answers.map((answer, index) => (
@@ -344,7 +333,6 @@ export default function Quiz() {
               ))}
             </div>
 
-            {/* Action Buttons */}
             <div className="flex gap-4 justify-center">
               <button
                 onClick={resetQuiz}

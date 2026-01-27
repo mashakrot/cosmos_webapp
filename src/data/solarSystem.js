@@ -91,7 +91,7 @@ export const solarSystem = [
     description:
       "Saturn is a gas giant distinguished by its spectacular ring system, composed of countless icy particles orbiting in delicate balance.",
     funFact:
-      "Saturn’s rings are incredibly thin—despite spanning hundreds of thousands of kilometers, they are only about 10 meters thick."
+      "Saturn’s rings are incredibly thin - despite spanning hundreds of thousands of kilometers, they are only about 10 meters thick."
   },
 
   {
@@ -113,7 +113,7 @@ export const solarSystem = [
     size: 70,
     orbit: 390,
     description:
-      "Neptune is a distant, deep-blue world shaped by violent winds and powerful storms, far beyond the warmth of the Sun.",
+      "Neptune is a distant, deep - blue world shaped by violent winds and powerful storms, far beyond the warmth of the Sun.",
     funFact:
       "Neptune’s winds can exceed 2,000 km/h, making them the fastest recorded in the solar system."
   }

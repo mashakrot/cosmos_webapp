@@ -9,13 +9,13 @@ export default function PlanetModal({ planet, onClose }) {
   return (
     <div onClick={onClose} className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
 
-      <div className="bg-spaceCard max-w-4xl w-full rounded-2xl p-8 relative max-h-[90vh] overflow-y-auto no-scrollbar flex flex-col md:flex-row gap-6"
+      <div className="bg-spaceCard max-w-4xl w-full rounded-2xl p-8 relative overflow-y-auto no-scrollbar flex flex-col md:flex-row gap-6"
         onClick={(e) => e.stopPropagation()}>
 
 
         <div className="flex-none flex justify-center md:justify-start">
           <img src={planet.image} alt={planet.name}
-            className="w-10 md:w-48 h-auto rounded-xl shadow-lg border-none"/>
+            className="w-10 md:w-48 h-auto rounded-xl border-none"/>
         </div>
 
 
