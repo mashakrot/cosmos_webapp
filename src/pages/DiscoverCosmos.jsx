@@ -31,8 +31,9 @@ export default function DiscoverCosmos() {
                 <h1 className="text-3xl font-semibold mb-2">
                     Discover the Cosmos
                 </h1>
-                <p className="text-muted max-w-xl">
-                    Explore the Solar System by clicking on a planet to reveal
+                <p className="text-muted max-w-xl z-auto mb-6">
+                    Explore the Solar System by <br></br>
+                    clicking on a planet to reveal
                     interesting facts.
                 </p>
 

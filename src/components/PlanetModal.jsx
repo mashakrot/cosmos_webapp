@@ -13,7 +13,7 @@ export default function PlanetModal({ planet, onClose }) {
         onClick={(e) => e.stopPropagation()}>
 
 
-        <div className="flex-none flex justify-center md:justify-start">
+        <div className="flex-none self-start flex justify-center md:justify-start">
           <img src={planet.image} alt={planet.name}
             className="w-10 md:w-48 h-auto rounded-xl border-none"/>
         </div>
