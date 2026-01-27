@@ -33,7 +33,7 @@ export default function PlanetButton({
   return (
     <div className="absolute inset-0 flex items-center justify-center">
       <div
-        className="absolute rounded-full border border-white/10 pointer-events-none"
+        className="absolute rounded-full border border-white/20 pointer-events-none"
         style={{
           width: planet.orbit * 2,
           height: planet.orbit * 2,

@@ -33,7 +33,7 @@ export default function DiscoverCosmos() {
                 </h1>
                 <p className="text-muted max-w-xl">
                     Explore the Solar System by clicking on a planet to reveal
-                    fascinating facts and imagery.
+                    interesting facts.
                 </p>
 
 
@@ -56,7 +56,7 @@ export default function DiscoverCosmos() {
                     {planets.map((planet, index) => (
                         <div key={planet.id}
                             className="absolute inset-0 flex items-center justify-center">
-                            <div className="absolute rounded-full border border-white/10 pointer-events-none"
+                            <div className="absolute rounded-full border border-white/20 pointer-events-none"
                                 style={{
                                     width: planet.orbit * 2,
                                     height: planet.orbit * 2
