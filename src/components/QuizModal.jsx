@@ -41,8 +41,8 @@ export default function QuizModal({ planet, onPass, onFail, onExit, characterImg
 
     return (
         <div className="fixed inset-0 bg-black/80 flex flex-col items-center justify-center z-50 px-4">
-            <div className="flex items-center justify-center w-full gap-3">
-                <img src={characterImg} alt="Guide" className="w-36 h-auto mt-20 mr-12 mb-4 rounded-full border-none flex-none self-start" />
+            <div className="flex items-center justify-center w-full gap-3 mr-12">
+                <img src={characterImg} alt="Guide" className="w-48 h-auto mt-20 mr-12 mb-4 rounded-full border-none flex-none self-start" />
 
                 <div className="bg-spaceCard w-full max-w-lg p-6 rounded-2xl relative">
                     <button onClick={onExit} className="absolute top-4 right-4 text-muted hover:text-accent">×</button>

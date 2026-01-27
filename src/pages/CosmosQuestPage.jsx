@@ -22,12 +22,12 @@ export default function CosmosQuestPage() {
     const [showInstructions, setShowInstructions] = useState(true);
 
     const characterStates = {
-        idle: "/src/assets/img/character.png",
-        happy: "/src/assets/img/character-happy.png",
-        sad: "/src/assets/img/character-sad.png",
-        surprised: "/src/assets/img/character.png",
-        victory: "/src/assets/img/character-happy.png",
-        gameOver: "/src/assets/img/character-cry.png",
+        idle: "/src/assets/img/Bob/Default.png",
+        happy: "/src/assets/img/Bob/Happy_Mouth_Opened.png",
+        sad: "/src/assets/img/Bob/Sad.png",
+        surprised: "/src/assets/img/Bob/Default_Mouth_Opened.png",
+        victory: "/src/assets/img/Bob/Happy_Mouth_Opened.png",
+        gameOver: "/src/assets/img/Bob/Crying.png",
     };
     const [characterEmotion, setCharacterEmotion] = useState("idle");
 
