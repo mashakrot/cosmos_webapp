@@ -1,3 +1,14 @@
+import sunDrawing from "/src/assets/img/solar_systems/sun.png";
+import mercuryDrawing from "/src/assets/img/solar_systems/mercury.png";
+import venusDrawing from "/src/assets/img/solar_systems/venus.png";
+import earthDrawing from "/src/assets/img/solar_systems/earth.png";
+import marsDrawing from "/src/assets/img/solar_systems/mars.png";
+
+import jupiterDrawing from "/src/assets/img/solar_systems/jupiter.png";
+import saturnDrawing from "/src/assets/img/solar_systems/saturn.png";
+import uranusDrawing from "/src/assets/img/solar_systems/uranus.png";
+import neptuneDrawing from "/src/assets/img/solar_systems/neptune.png";
+
 import sunImg from "/src/assets/img/sun.png";
 import mercuryImg from "/src/assets/img/mercury.webp";
 import venusImg from "/src/assets/img/venus.png";
@@ -14,10 +25,10 @@ export const solarSystem = [
     id: "sun",
     name: "Sun",
     image: sunImg,
+    drawing: sunDrawing,
     size: 120,
     orbit: 0,
     personality: "The Life Giver",
-
     description:
       "The Sun is the blazing heart of our solar system, a vast sphere of hot plasma whose gravity binds everything in orbit. Its energy drives planetary climates and makes life on Earth possible.",
     funFact:
@@ -30,6 +41,8 @@ export const solarSystem = [
     id: "mercury",
     name: "Mercury",
     image: mercuryImg,
+    drawing: mercuryDrawing,
+
     size: 48,
     orbit: 80,
     personality: "The Speedster",
@@ -48,6 +61,8 @@ export const solarSystem = [
     id: "venus",
     name: "Venus",
     image: venusImg,
+    drawing: venusDrawing,
+
     size: 58,
     orbit: 110,
     personality: "The Runaway Furnace",
@@ -66,6 +81,8 @@ export const solarSystem = [
     id: "earth",
     name: "Earth",
     image: earthImg,
+    drawing: earthDrawing,
+
     size: 60,
     orbit: 145,
     introQuestion: "Why is Earth the only known planet with life?",
@@ -84,6 +101,8 @@ export const solarSystem = [
     id: "mars",
     name: "Mars",
     image: marsImg,
+    drawing: marsDrawing,
+
     size: 60,
     orbit: 185,
     introQuestion: "What if a planet once looked like Earth?",
@@ -102,6 +121,8 @@ export const solarSystem = [
     id: "jupiter",
     name: "Jupiter",
     image: jupiterImg,
+    drawing: jupiterDrawing,
+
     size: 94,
     orbit: 230,
 
@@ -122,6 +143,8 @@ export const solarSystem = [
     id: "saturn",
     name: "Saturn",
     image: saturnImg,
+    drawing: saturnDrawing,
+
     size: 110,
     orbit: 280,
     introQuestion: "What makes a planet instantly recognizable?",
@@ -141,6 +164,8 @@ export const solarSystem = [
     id: "uranus",
     name: "Uranus",
     image: uranusImg,
+    drawing: uranusDrawing,
+
     size: 72,
     orbit: 330,
     introQuestion: "What if a planet rolled around the Sun?",
@@ -159,6 +184,8 @@ export const solarSystem = [
     id: "neptune",
     name: "Neptune",
     image: neptuneImg,
+    drawing: neptuneDrawing,
+
     size: 70,
     orbit: 390,
     introQuestion: "How wild can weather get in the outer solar system?",

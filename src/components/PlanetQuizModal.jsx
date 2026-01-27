@@ -18,7 +18,8 @@ export default function PlanetQuizModal({
         className="bg-spaceCard max-w-4xl w-full rounded-2xl p-8 relative overflow-y-auto no-scrollbar flex flex-col md:flex-row gap-6">
         <div className="flex-none self-start flex justify-center md:justify-start">
           <img
-            src={planet.image}
+            // src={planet.drawing}
+            src={planet.drawing}
             alt={planet.name}
             className="w-40 md:w-48 h-auto rounded-xl border-none" />
         </div>
