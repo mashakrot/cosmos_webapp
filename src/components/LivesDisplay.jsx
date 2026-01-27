@@ -1,3 +1,6 @@
+import LifeFull from "../assets/img/life-full.svg";
+import LifeEmpty from "../assets/img/life-empty.svg";
+
 export default function LivesDisplay({ lives, maxLives = 3 }) {
     return (
         <div className="flex items-center gap-2 mb-6">
@@ -5,8 +8,8 @@ export default function LivesDisplay({ lives, maxLives = 3 }) {
                 <img
                     key={i}
                     src={i < lives
-                            ? "/src/assets/img/life-full.svg"
-                            : "/src/assets/img/life-empty.svg"
+                            ? {LifeFull}
+                            : {LifeEmpty}
                     }
                     alt="life" className={"w-6 h-6 transition-all border-none duration-300 "} />
             ))}

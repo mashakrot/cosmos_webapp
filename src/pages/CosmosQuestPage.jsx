@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { solarSystem } from "../data/solarSystem";
 
 import InstructionsModal from "../components/InstructionsModal";
@@ -7,9 +7,17 @@ import SolarSystemView from "../components/SolarSystemView";
 
 import PlanetModal from "../components/PlanetQuizModal";
 import Quiz from "../components/QuizModal";
-
 import GameWinModal from "../components/GameWinModal";
 import GameOverModal from "../components/GameOverModal";
+
+
+// images
+import bobIdle from "../assets/img/Bob/Default.png";
+import bobHappy from "../assets/img/Bob/Happy_Mouth_Opened.png";
+import bobSad from "../assets/img/Bob/Sad.png";
+import bobSurprised from "../assets/img/Bob/Default_Mouth_Opened.png";
+import bobCrying from "../assets/img/Bob/Crying.png";
+
 
 // TODO: Character dialogue reacting to success/fail; Save progress in localStorage
 export default function CosmosQuestPage() {
@@ -22,13 +30,14 @@ export default function CosmosQuestPage() {
     const [showInstructions, setShowInstructions] = useState(true);
 
     const characterStates = {
-        idle: "/src/assets/img/Bob/Default.png",
-        happy: "/src/assets/img/Bob/Happy_Mouth_Opened.png",
-        sad: "/src/assets/img/Bob/Sad.png",
-        surprised: "/src/assets/img/Bob/Default_Mouth_Opened.png",
-        victory: "/src/assets/img/Bob/Happy_Mouth_Opened.png",
-        gameOver: "/src/assets/img/Bob/Crying.png",
+        idle: bobIdle,
+        happy: bobHappy,
+        sad: bobSad,
+        surprised: bobSurprised,
+        victory: bobHappy,
+        gameOver: bobCrying,
     };
+
     const [characterEmotion, setCharacterEmotion] = useState("idle");
 
 
@@ -84,7 +93,7 @@ export default function CosmosQuestPage() {
             <InstructionsModal
                 open={gameStarted && showInstructions}
                 onClose={() => setShowInstructions(false)}
-                    characterImg={currentCharacterImg} />
+                characterImg={currentCharacterImg} />
 
             {gameStarted && !gameOver && !allCleared && (
                 <>
@@ -126,8 +135,8 @@ export default function CosmosQuestPage() {
             )}
 
 
-            {gameOver && <GameOverModal onRestart={resetGame}     characterImg={currentCharacterImg}/>}
-            {allCleared && <GameWinModal onRestart={resetGame}     characterImg={currentCharacterImg}/>}
+            {gameOver && <GameOverModal onRestart={resetGame} characterImg={currentCharacterImg} />}
+            {allCleared && <GameWinModal onRestart={resetGame} characterImg={currentCharacterImg} />}
         </section>
     );
 }
