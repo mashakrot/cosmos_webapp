@@ -7,9 +7,7 @@ export default function LivesDisplay({ lives, maxLives = 3 }) {
             {Array.from({ length: maxLives }).map((_, i) => (
                 <img
                     key={i}
-                    src={i < lives
-                            ? {LifeFull}
-                            : {LifeEmpty}
+                    src={i < lives ? LifeFull : LifeEmpty
                     }
                     alt="life" className={"w-6 h-6 transition-all border-none duration-300 "} />
             ))}
