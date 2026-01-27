@@ -7,6 +7,7 @@ import Apod from "./pages/Apod";
 import ApodArchive from "./pages/ApodArchive";
 import MarsWeather from "./pages/MarsWeather";
 import Quiz from "./pages/Quiz";
+import GamePage from "./pages/CosmosQuestPage";
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
         <Route path="/archive" element={<ApodArchive />} />
         <Route path="/mars-weather" element={<MarsWeather />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/game" element={<GamePage />} />
       </Routes>    </div>
   );
 }
+  
